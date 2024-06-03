@@ -5,12 +5,14 @@
              Title="Recargas">
     <StackLayout Padding="20" BackgroundColor="#29ADF4">
 
+        <!-- Jordan Aguiar -->
+        <!-- Entry para el ingreso de telefono -->
         <Label Text="Ingrese el numero telefonico" TextColor="White"/>
 
-        <Entry x:Name="IngresarFono" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="White"/>
+        <Entry x:Name="IngresarFono" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="Black" FontSize="20"/>
 
 
-        <!-- Seleccion de la operadora -->
+        <!-- Seleccion de la operadora mediante un picker -->
         <Picker x:Name="pickerOperator" Title="Seleccionar Operador" TextColor="Black" BackgroundColor="White" >
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -22,13 +24,13 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
+        <!-- Radio con las opciones para la recarga -->
+        <RadioButton x:Name="R1" Content="3 dolares" GroupName="Recarga"  TextColor="White" CheckedChanged="ValorRecarga"/>
+        <RadioButton x:Name="R2" Content="5 dolares" GroupName="Recarga"  TextColor="White" CheckedChanged="ValorRecarga"/>
+        <RadioButton x:Name="R3" Content="10 dolares" GroupName="Recarga"  TextColor="White" CheckedChanged="ValorRecarga"/>
 
-        <RadioButton x:Name="R1" Content="3 dolares" GroupName="Recarga"  TextColor="White"/>
-        <RadioButton x:Name="R2" Content="5 dolares" GroupName="Recarga"  TextColor="White"/>
-        <RadioButton x:Name="R3" Content="10 dolares" GroupName="Recarga"  TextColor="White"/>
-
-
-        <Button Text="Hacer Recarga" TextColor="Black" BackgroundColor="White" />
+        <!-- Boton para procesar todos los cambios realizados por el usuario -->
+        <Button Text="Hacer Recarga" TextColor="Black" BackgroundColor="White" Clicked="RecargarBoton" />
 
 
 
