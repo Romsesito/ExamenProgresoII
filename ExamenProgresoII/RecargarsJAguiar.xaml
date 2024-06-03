@@ -2,11 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExamenProgresoII.RecargarsJAguiar"
-             Title="RecargarsJAguiar">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Recargas">
+    <StackLayout Padding="20" BackgroundColor="#29ADF4">
+
+        <Label Text="Ingrese el numero telefonico" TextColor="White"/>
+
+        <Entry x:Name="IngresarFono" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="White"/>
+
+
+        <!-- Seleccion de la operadora -->
+        <Picker x:Name="pickerOperator" Title="Seleccionar Operador" TextColor="Black" BackgroundColor="White" >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Claro</x:String>
+                    <x:String>CNT</x:String>
+                    <x:String>Movistar</x:String>
+                    <x:String>Tuenti</x:String>
+                    <x:String>JAguiar</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <RadioButton x:Name="R1" Content="3 dolares" GroupName="Recarga"  TextColor="White"/>
+        <RadioButton x:Name="R2" Content="5 dolares" GroupName="Recarga"  TextColor="White"/>
+        <RadioButton x:Name="R3" Content="10 dolares" GroupName="Recarga"  TextColor="White"/>
+
+
+        <Button Text="Hacer Recarga" TextColor="Black" BackgroundColor="White" />
+
+
+
+
+
+
+
+
+
+    </StackLayout>
 </ContentPage>
