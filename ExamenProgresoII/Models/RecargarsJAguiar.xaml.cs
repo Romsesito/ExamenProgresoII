@@ -27,6 +27,9 @@ public partial class RecargarsJAguiar : ContentPage
         var phoneNumber = IngresarFono.Text;
         var operatorName = pickerOperator.SelectedItem?.ToString();
 
+
+   
+
         if (string.IsNullOrEmpty(phoneNumber) || string.IsNullOrEmpty(operatorName) || selectedAmount == 0)
         {
             await DisplayAlert("Error", "Todos los campos deben estar llenos.", "OK");

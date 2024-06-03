@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExamenProgresoII.RecargarsJAguiar"
              Title="Recargas">
+    
+    
+    
     <StackLayout Padding="20" BackgroundColor="White">
 
 
@@ -15,7 +18,9 @@
         <!-- Entry para el ingreso de telefono -->
         <Label Text="Ingrese el numero telefonico" TextColor="#2A6EFD"/>
 
-        <Entry x:Name="IngresarFono" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="#2A6EFD" FontSize="20"/>
+  <Entry x:Name="IngresarFono" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="#2A6EFD" FontSize="20"/> 
+
+
 
 
         <!-- Seleccion de la operadora mediante un picker -->
