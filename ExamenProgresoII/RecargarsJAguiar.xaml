@@ -3,17 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExamenProgresoII.RecargarsJAguiar"
              Title="Recargas">
-    <StackLayout Padding="20" BackgroundColor="#29ADF4">
+    <StackLayout Padding="20" BackgroundColor="White">
 
+
+
+
+        <!-- Logo para la interfaz -->
+        <Image Source="tlogo.png"  WidthRequest="360"/>
+        
         <!-- Jordan Aguiar -->
         <!-- Entry para el ingreso de telefono -->
-        <Label Text="Ingrese el numero telefonico" TextColor="White"/>
+        <Label Text="Ingrese el numero telefonico" TextColor="#2A6EFD"/>
 
-        <Entry x:Name="IngresarFono" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="Black" FontSize="20"/>
+        <Entry x:Name="IngresarFono" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="#2A6EFD" FontSize="20"/>
 
 
         <!-- Seleccion de la operadora mediante un picker -->
-        <Picker x:Name="pickerOperator" Title="Seleccionar Operador" TextColor="Black" BackgroundColor="White" >
+        <Picker x:Name="pickerOperator" Title="Seleccionar Operador" TextColor="White" BackgroundColor="#2A6EFD" >
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Claro</x:String>
@@ -25,12 +31,18 @@
             </Picker.ItemsSource>
         </Picker>
         <!-- Radio con las opciones para la recarga -->
-        <RadioButton x:Name="R1" Content="3 dolares" GroupName="Recarga"  TextColor="White" CheckedChanged="ValorRecarga"/>
-        <RadioButton x:Name="R2" Content="5 dolares" GroupName="Recarga"  TextColor="White" CheckedChanged="ValorRecarga"/>
-        <RadioButton x:Name="R3" Content="10 dolares" GroupName="Recarga"  TextColor="White" CheckedChanged="ValorRecarga"/>
+        <RadioButton x:Name="R1" Content="3 dolares" GroupName="Recarga"  TextColor="#2A6EFD" CheckedChanged="ValorRecarga"/>
+        <RadioButton x:Name="R2" Content="5 dolares" GroupName="Recarga"  TextColor="#2A6EFD" CheckedChanged="ValorRecarga"/>
+        <RadioButton x:Name="R3" Content="10 dolares" GroupName="Recarga"  TextColor="#2A6EFD" CheckedChanged="ValorRecarga"/>
 
         <!-- Boton para procesar todos los cambios realizados por el usuario -->
-        <Button Text="Hacer Recarga" TextColor="Black" BackgroundColor="White" Clicked="RecargarBoton" />
+        <Button Text="Hacer Recarga" TextColor="White" BackgroundColor="#2A6EFD" Clicked="RecargarBoton" />
+
+
+
+        <Label AnchorY="5"/>
+        <!-- Banner -->
+        <Image Source="tbanner.jpg"  WidthRequest="360"/>
 
 
 

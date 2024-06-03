@@ -10,6 +10,7 @@ public partial class RecargarsJAguiar : ContentPage
 
     private int selectedAmount;
 
+    // Validacion de monto seleccionado.
     private void ValorRecarga(object sender, CheckedChangedEventArgs e)
     {
         if (e.Value)
@@ -20,6 +21,7 @@ public partial class RecargarsJAguiar : ContentPage
         }
     }
 
+    // Validacion de espacios en blanco & recarga exitosa
     private async void RecargarBoton(object sender, EventArgs e)
     {
         var phoneNumber = IngresarFono.Text;
@@ -38,7 +40,7 @@ public partial class RecargarsJAguiar : ContentPage
             await DisplayAlert("Recarga Realizada", $"Se hizo una recarga de {selectedAmount} dolares al numero {phoneNumber}.", "Listo");
         }
     }
-
+    // Guardar archivo
     private async Task RealizarRecargaAsync(string phoneNumber, int amount)
     {
         var date = DateTime.Now.ToString("dd/MM/yyyy");
